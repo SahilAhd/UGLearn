@@ -1,0 +1,122 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  padding-top: 6rem;
+}
+
+.notFound h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0 1rem;
+  color: #fba202;
+}
+
+.notFound p {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.Toastify__toast-container {
+  top: 5rem !important;
+  z-index: 9999 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gold {
+  color: #fba202;
+}
+
+/* Logo */
+.logo {
+  width: 3.5rem;
+}
+
+.animated-btn {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  border-radius: 110px;
+  outline: 1px solid hsla(0, 0%, 100%, 0.2);
+  transition: color 0.35s linear, outline 0.35s linear;
+  z-index: 0;
+  overflow: clip;
+}
+
+.animated-btn::before {
+  content: "";
+  position: absolute;
+  top: -1%;
+  bottom: -1%;
+  left: -0.8px;
+  right: -0.8px;
+  height: 102%;
+  background: #ffa200;
+  transform: scaleY(0);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: top;
+  z-index: -1;
+}
+
+.animated-btn:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
+.animated-btn:hover {
+  color: #000 !important;
+  outline: 1px solid #ffa200;
+}
+
+.underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  background-color: #fba202;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 768px) {
+  .m-container {
+    padding-top: 6rem !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .logo {
+    width: 2.5rem;
+    padding-top: 0.25rem;
+  }
+
+  .animated-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}
